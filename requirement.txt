@@ -1,0 +1,6 @@
+flask
+flask-restful
+gunicorn
+gevent
+pytest
+dashscope>=1.10.0

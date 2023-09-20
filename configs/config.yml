@@ -1,0 +1,14 @@
+OFFLINE_SWITCH: sandbox
+
+
+DEVICE:
+    CPU: 'cpu'
+    GPU: 'cuda:0'
+
+RESULTCODE:
+    SUCC : 0
+    ERROR : -1
+    PARAMSERROR : -2
+
+STRATEGY:
+    SAMPLE_RATE: 22050
