@@ -1,0 +1,22 @@
+{
+  "name": "a2ui-v0.9-renderer",
+  "version": "0.1.0",
+  "description": "A lightweight A2UI v0.9 renderer for web clients",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "lint": "node --check src/*.js test/*.js",
+    "deploy:github": "bash ./scripts/one-click-deploy.sh"
+  },
+  "keywords": [
+    "a2ui",
+    "renderer",
+    "ui-schema",
+    "v0.9"
+  ],
+  "license": "MIT"
+}

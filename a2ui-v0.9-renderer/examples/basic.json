@@ -1,0 +1,105 @@
+{
+  "version": "v0.9",
+  "datas": [
+    {
+      "createSurface": {
+        "catalogId": "com.a2ui.bill.query",
+        "sendDataModel": true,
+        "surfaceId": "s_bill",
+        "theme": {
+          "primaryColor": "#00b859"
+        }
+      }
+    },
+    {
+      "updateComponents": {
+        "surfaceId": "s_bill",
+        "components": [
+          {
+            "component": "Column",
+            "children": ["root-header", "root-body", "root-footer"],
+            "id": "root"
+          },
+          {
+            "component": "Row",
+            "children": ["header-title"],
+            "id": "root-header"
+          },
+          {
+            "component": "Text",
+            "id": "header-title",
+            "text": "生活缴费"
+          },
+          {
+            "component": "Column",
+            "children": ["body-label", "body-picker"],
+            "id": "root-body"
+          },
+          {
+            "component": "Text",
+            "id": "body-label",
+            "text": "缴费类型："
+          },
+          {
+            "component": "ChoicePicker",
+            "options": [
+              { "label": "水费", "value": "水费" },
+              { "label": "电费", "value": "电费" },
+              { "label": "燃气费", "value": "燃气费" }
+            ],
+            "variant": "singleSelection",
+            "id": "body-picker",
+            "label": "缴费类型：",
+            "templateId": "tpl_label",
+            "value": {
+              "path": "/账单类型"
+            }
+          },
+          {
+            "component": "Text",
+            "bindText": "label",
+            "id": "tpl_label",
+            "text": "  {{label}}"
+          },
+          {
+            "component": "Row",
+            "children": ["footer-btn"],
+            "id": "root-footer"
+          },
+          {
+            "component": "Text",
+            "id": "footer-btn-text",
+            "text": "  确认"
+          },
+          {
+            "component": "Row",
+            "children": ["footer-btn-text"],
+            "id": "footer-btn-row"
+          },
+          {
+            "component": "Button",
+            "action": {
+              "event": {
+                "name": "submit_clarification",
+                "context": {
+                  "intent_code": "queryBill",
+                  "账单类型": { "path": "/账单类型" },
+                  "source_agent": "mcp"
+                }
+              }
+            },
+            "id": "footer-btn",
+            "child": "footer-btn-row"
+          }
+        ]
+      }
+    },
+    {
+      "updateDataModel": {
+        "path": "/",
+        "surfaceId": "s_bill",
+        "value": {}
+      }
+    }
+  ]
+}
