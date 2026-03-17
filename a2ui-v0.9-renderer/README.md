@@ -7,6 +7,7 @@
 - 协议解析（`parseProtocol`）
 - 按钮事件上行构建（`buildEventPayload`，支持 `sendDataModel: true`）
 
+
 ## 快速开始
 
 ```bash
@@ -31,7 +32,7 @@ npm test
 
 ```js
 import { renderProtocolToString, buildEventPayload } from 'a2ui-v0.9-renderer';
-import billSample from './examples/basic.json' assert { type: 'json' };
+
 
 const html = renderProtocolToString(billSample);
 console.log(html); // 渲染客户端结构
@@ -54,12 +55,14 @@ console.log(uplink);
 */
 ```
 
+
 ## 目录结构
 
 ```text
 a2ui-v0.9-renderer/
 ├── .github/workflows/ci.yml
 ├── examples/basic.json
+
 ├── src/
 │   ├── a2ui09.js
 │   ├── index.js

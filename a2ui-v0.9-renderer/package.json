@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "lint": "node --check src/*.js test/*.js"
+    "lint": "node --check src/*.js test/*.js",
+    "deploy:github": "bash ./scripts/one-click-deploy.sh"
   },
   "keywords": [
     "a2ui",
